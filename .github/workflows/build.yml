@@ -38,4 +38,4 @@ jobs:
           verbose: true
           #tags: true
           draft: false
-          default_release_name: "Master-PDF-Editor v"
+          default_release_name: "MasterPDFEditor v in AppImage"
