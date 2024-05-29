@@ -66,7 +66,8 @@ init:
 	#wget https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage \
 	#	--output-document=$(PWD)/bin/appimagetool.AppImage
 
-	wget -q https://github.com/probonopd/go-appimage/releases/download/continuous/appimagetool-831-x86_64.AppImage -O appimagetool-x86_64.AppImage
+	wget -q https://github.com/probonopd/go-appimage/releases/download/continuous/appimagetool-831-x86_64.AppImage \
+		--output-document=$(PWD)/bin/appimagetool.AppImage
 
 	chmod +x $(PWD)/bin/appimagetool.AppImage
 
