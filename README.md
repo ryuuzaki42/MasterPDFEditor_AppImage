@@ -2,7 +2,7 @@
 # MasterPDFEditor.AppImage
 
 ## Repository: https://github.com/ryuuzaki42/MasterPDFEditor_AppImage
-    MasterPDFEditor: 5.9.90
+    MasterPDFEditor: 5.9.94
 
 This is version 5, which saves with a watermark from the trial version.
 
