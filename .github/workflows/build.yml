@@ -32,7 +32,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          file: "./app/*.AppImage; ./app/*.md5"
+          file: "./app/MasterPDFEditor-*.AppImage; ./app/MasterPDFEditor-*.md5; ./app/MasterPDFEditor-*.pdf"
           #delete_file: "random-name-*.txt;random-*.txt"
           release_id: ${{ steps.create_release.outputs.id }}
           #overwrite: true
