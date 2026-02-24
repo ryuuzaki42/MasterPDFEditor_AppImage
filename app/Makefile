@@ -29,7 +29,7 @@ all: clean init
 	rm -f $(PWD)/build/Boilerplate.AppDir/mpe/*.jpg 	|| true
 	rm -f $(PWD)/build/Boilerplate.AppDir/mpe/*.sh 		|| true
 
-	mv $(PWD)/build/Boilerplate.AppDir/mpe/help/MasterPDFEditor-UserManual_EN.pdf $(PWD)/build/
+	mv $(PWD)/build/Boilerplate.AppDir/mpe/help/MasterPDFEditor-UserManual_EN.pdf $(PWD)/
 	pwd; ls -lah
 
 	echo ''                                                    >> $(PWD)/build/Boilerplate.AppDir/AppRun
@@ -56,8 +56,9 @@ all: clean init
 	export ARCH=x86_64 && $(PWD)/bin/appimagetool.AppImage $(PWD)/build/Boilerplate.AppDir $(PWD)/MasterPDFEditor.AppImage
 	chmod +x $(PWD)/MasterPDFEditor.AppImage
 	mv $(PWD)/MasterPDFEditor.AppImage $(PWD)/MasterPDFEditor-$(VERSION)-x86_64-1_JB.AppImage
-	md5sum $(PWD)/MasterPDFEditor-$(VERSION)-x86_64-1_JB.AppImage > $(PWD)/MasterPDFEditor-$(VERSION)-x86_64-1_JB.AppImage.md5
-	ls -lah
+	cd $(PWD)/
+	md5sum MasterPDFEditor-$(VERSION)-x86_64-1_JB.AppImage > MasterPDFEditor-$(VERSION)-x86_64-1_JB.AppImage.md5
+	pwd; ls -lah
 
 init:
 	mkdir --parents $(PWD)/bin
