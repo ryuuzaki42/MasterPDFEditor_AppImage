@@ -72,12 +72,3 @@ clean:
 	rm -rf $(PWD)/*.AppImage
 	rm -rf $(PWD)/bin/*
 	rm -rf $(PWD)/build
-/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage \
-        --output-document=$(PWD)/bin/appimagetool.AppImage
-
-    chmod +x $(PWD)/bin/appimagetool.AppImage
-
-clean:
-    rm -rf $(PWD)/*.AppImage
-    rm -rf $(PWD)/bin/*
-    rm -rf $(PWD)/build
