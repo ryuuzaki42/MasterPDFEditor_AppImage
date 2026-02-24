@@ -29,6 +29,9 @@ all: clean init
 	rm -f $(PWD)/build/Boilerplate.AppDir/mpe/*.jpg 	|| true
 	rm -f $(PWD)/build/Boilerplate.AppDir/mpe/*.sh 		|| true
 
+	mv $(PWD)/build/Boilerplate.AppDir/mpe/help/MasterPDFEditor-UserManual_EN.pdf $(PWD)/build/
+	pwd; ls -lah
+
 	echo ''                                                    >> $(PWD)/build/Boilerplate.AppDir/AppRun
 	echo ''                                                    >> $(PWD)/build/Boilerplate.AppDir/AppRun
 	echo 'LD_LIBRARY_PATH=$${LD_LIBRARY_PATH}:$${APPDIR}/mpe'  >> $(PWD)/build/Boilerplate.AppDir/AppRun
