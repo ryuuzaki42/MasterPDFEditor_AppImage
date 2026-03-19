@@ -16,7 +16,9 @@ env:
 jobs:
   deploy:
     name: Deploy
-    runs-on: ubuntu-latest
+    #runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+
     steps:
       - uses: actions/checkout@master
       - name: build
@@ -25,7 +27,6 @@ jobs:
           docker compose -f docker-compose.yaml build --no-cache --progress=plain
           docker compose -f docker-compose.yaml run appimage make all
 
-      # https://github.com/marketplace/actions/upload-to-github-release
       - uses: xresloader/upload-to-github-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
